@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BChatModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BCH001">
+    <Key>
+      <PropertyRef Name="COLUMN001" />
+    </Key>
+    <Property Name="COLUMN001" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="COLUMN002" Type="nvarchar" MaxLength="50" />
+    <Property Name="COLUMN003" Type="nvarchar" MaxLength="50" />
+    <Property Name="COLUMN004" Type="nvarchar" MaxLength="50" />
+    <Property Name="COLUMN005" Type="nvarchar" MaxLength="50" />
+    <Property Name="COLUMN006" Type="nvarchar" MaxLength="50" />
+    <Property Name="COLUMN007" Type="nvarchar" MaxLength="100" />
+    <Property Name="COLUMN008" Type="smallint" />
+    <Property Name="COLUMN009" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BCH002">
+    <Key>
+      <PropertyRef Name="COLUMN001" />
+    </Key>
+    <Property Name="COLUMN001" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="COLUMN002" Type="nvarchar" MaxLength="500" />
+    <Property Name="COLUMN003" Type="datetime2" Precision="7" />
+    <Property Name="COLUMN004" Type="smallint" />
+  </EntityType>
+  <EntityType Name="BCH003">
+    <Key>
+      <PropertyRef Name="COLUMN001" />
+    </Key>
+    <Property Name="COLUMN001" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="COLUMN002" Type="nvarchar" MaxLength="50" />
+    <Property Name="COLUMN003" Type="nvarchar" MaxLength="50" />
+    <Property Name="COLUMN004" Type="nvarchar" MaxLength="50" />
+    <Property Name="COLUMN005" Type="datetime2" Precision="7" />
+    <Property Name="COLUMN006" Type="smallint" />
+  </EntityType>
+  <Association Name="FK__BCH003__COLUMN00__1FCDBCEB">
+    <End Role="BCH002" Type="Self.BCH002" Multiplicity="0..1" />
+    <End Role="BCH003" Type="Self.BCH003" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BCH002">
+        <PropertyRef Name="COLUMN001" />
+      </Principal>
+      <Dependent Role="BCH003">
+        <PropertyRef Name="COLUMN004" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BCH003__COLUMN00__20C1E124">
+    <End Role="BCH001" Type="Self.BCH001" Multiplicity="0..1" />
+    <End Role="BCH003" Type="Self.BCH003" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BCH001">
+        <PropertyRef Name="COLUMN001" />
+      </Principal>
+      <Dependent Role="BCH003">
+        <PropertyRef Name="COLUMN002" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BCH003__COLUMN00__21B6055D">
+    <End Role="BCH001" Type="Self.BCH001" Multiplicity="0..1" />
+    <End Role="BCH003" Type="Self.BCH003" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BCH001">
+        <PropertyRef Name="COLUMN001" />
+      </Principal>
+      <Dependent Role="BCH003">
+        <PropertyRef Name="COLUMN003" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BChatModelStoreContainer">
+    <EntitySet Name="BCH001" EntityType="Self.BCH001" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BCH002" EntityType="Self.BCH002" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BCH003" EntityType="Self.BCH003" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__BCH003__COLUMN00__1FCDBCEB" Association="Self.FK__BCH003__COLUMN00__1FCDBCEB">
+      <End Role="BCH002" EntitySet="BCH002" />
+      <End Role="BCH003" EntitySet="BCH003" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BCH003__COLUMN00__20C1E124" Association="Self.FK__BCH003__COLUMN00__20C1E124">
+      <End Role="BCH001" EntitySet="BCH001" />
+      <End Role="BCH003" EntitySet="BCH003" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BCH003__COLUMN00__21B6055D" Association="Self.FK__BCH003__COLUMN00__21B6055D">
+      <End Role="BCH001" EntitySet="BCH001" />
+      <End Role="BCH003" EntitySet="BCH003" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

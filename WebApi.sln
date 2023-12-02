@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{07E692FE-32B0-40F0-80EC-063932DDCACB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BChatDataAccess", "BChatDataAccess\BChatDataAccess.csproj", "{CCCD5D41-8C63-4410-B3A8-E787D0946F46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BchatDataRetrieve", "BchatDataRetrieve\BchatDataRetrieve.csproj", "{24EA81D7-DAE8-484F-A169-65F3E9DC6732}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07E692FE-32B0-40F0-80EC-063932DDCACB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07E692FE-32B0-40F0-80EC-063932DDCACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07E692FE-32B0-40F0-80EC-063932DDCACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07E692FE-32B0-40F0-80EC-063932DDCACB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCCD5D41-8C63-4410-B3A8-E787D0946F46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCCD5D41-8C63-4410-B3A8-E787D0946F46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCCD5D41-8C63-4410-B3A8-E787D0946F46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCCD5D41-8C63-4410-B3A8-E787D0946F46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24EA81D7-DAE8-484F-A169-65F3E9DC6732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24EA81D7-DAE8-484F-A169-65F3E9DC6732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24EA81D7-DAE8-484F-A169-65F3E9DC6732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24EA81D7-DAE8-484F-A169-65F3E9DC6732}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

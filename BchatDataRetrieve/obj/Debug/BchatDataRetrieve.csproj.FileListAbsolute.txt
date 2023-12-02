@@ -1,0 +1,15 @@
+D:\VS2034\WebApi\BchatDataRetrieve\bin\Debug\BchatDataRetrieve.dll
+D:\VS2034\WebApi\BchatDataRetrieve\bin\Debug\BchatDataRetrieve.pdb
+D:\VS2034\WebApi\BchatDataRetrieve\bin\Debug\BChatDataAccess.dll
+D:\VS2034\WebApi\BchatDataRetrieve\bin\Debug\EntityFramework.dll
+D:\VS2034\WebApi\BchatDataRetrieve\bin\Debug\BChatDataAccess.pdb
+D:\VS2034\WebApi\BchatDataRetrieve\bin\Debug\EntityFramework.xml
+D:\VS2034\WebApi\BchatDataRetrieve\obj\Debug\BchatDataRetrieve.dll
+D:\VS2034\WebApi\BchatDataRetrieve\obj\Debug\BchatDataRetrieve.pdb
+D:\VS2034\WebApi\BchatDataRetrieve\bin\Debug\BchatDataRetrieve.dll.config
+D:\VS2034\WebApi\BchatDataRetrieve\bin\Debug\EntityFramework.SqlServer.dll
+D:\VS2034\WebApi\BchatDataRetrieve\bin\Debug\EntityFramework.SqlServer.xml
+D:\VS2034\WebApi\BchatDataRetrieve\bin\Debug\BChatDataAccess.dll.config
+D:\VS2034\WebApi\BchatDataRetrieve\obj\Debug\BchatDataRetrieve.csproj.AssemblyReference.cache
+D:\VS2034\WebApi\BchatDataRetrieve\obj\Debug\BchatDataRetrieve.csproj.CoreCompileInputs.cache
+D:\VS2034\WebApi\BchatDataRetrieve\obj\Debug\BchatDataRetrieve.csproj.CopyComplete

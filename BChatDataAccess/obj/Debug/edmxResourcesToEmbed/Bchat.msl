@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BChatModelStoreContainer" CdmEntityContainer="BChatEntities">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="BChatModel.User">
+        <MappingFragment StoreEntitySet="BCH001">
+          <ScalarProperty Name="Id" ColumnName="COLUMN001" />
+          <ScalarProperty Name="UserId" ColumnName="COLUMN002" />
+          <ScalarProperty Name="FirstName" ColumnName="COLUMN003" />
+          <ScalarProperty Name="MiddleName" ColumnName="COLUMN004" />
+          <ScalarProperty Name="LastName" ColumnName="COLUMN005" />
+          <ScalarProperty Name="MobileNo" ColumnName="COLUMN006" />
+          <ScalarProperty Name="EmailId" ColumnName="COLUMN007" />
+          <ScalarProperty Name="Status" ColumnName="COLUMN008" />
+          <ScalarProperty Name="Country" ColumnName="COLUMN009" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BCH002">
+      <EntityTypeMapping TypeName="BChatModel.BCH002">
+        <MappingFragment StoreEntitySet="BCH002">
+          <ScalarProperty Name="COLUMN001" ColumnName="COLUMN001" />
+          <ScalarProperty Name="COLUMN002" ColumnName="COLUMN002" />
+          <ScalarProperty Name="COLUMN003" ColumnName="COLUMN003" />
+          <ScalarProperty Name="COLUMN004" ColumnName="COLUMN004" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BCH003">
+      <EntityTypeMapping TypeName="BChatModel.BCH003">
+        <MappingFragment StoreEntitySet="BCH003">
+          <ScalarProperty Name="COLUMN001" ColumnName="COLUMN001" />
+          <ScalarProperty Name="COLUMN002" ColumnName="COLUMN002" />
+          <ScalarProperty Name="COLUMN003" ColumnName="COLUMN003" />
+          <ScalarProperty Name="COLUMN004" ColumnName="COLUMN004" />
+          <ScalarProperty Name="COLUMN005" ColumnName="COLUMN005" />
+          <ScalarProperty Name="COLUMN006" ColumnName="COLUMN006" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

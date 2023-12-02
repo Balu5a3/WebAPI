@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BChatModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BCH001">
+          <Key>
+            <PropertyRef Name="COLUMN001" />
+          </Key>
+          <Property Name="COLUMN001" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="COLUMN002" Type="nvarchar" MaxLength="50" />
+          <Property Name="COLUMN003" Type="nvarchar" MaxLength="50" />
+          <Property Name="COLUMN004" Type="nvarchar" MaxLength="50" />
+          <Property Name="COLUMN005" Type="nvarchar" MaxLength="50" />
+          <Property Name="COLUMN006" Type="nvarchar" MaxLength="50" />
+          <Property Name="COLUMN007" Type="nvarchar" MaxLength="100" />
+          <Property Name="COLUMN008" Type="smallint" />
+          <Property Name="COLUMN009" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="BCH002">
+          <Key>
+            <PropertyRef Name="COLUMN001" />
+          </Key>
+          <Property Name="COLUMN001" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="COLUMN002" Type="nvarchar" MaxLength="500" />
+          <Property Name="COLUMN003" Type="datetime2" Precision="7" />
+          <Property Name="COLUMN004" Type="smallint" />
+        </EntityType>
+        <EntityType Name="BCH003">
+          <Key>
+            <PropertyRef Name="COLUMN001" />
+          </Key>
+          <Property Name="COLUMN001" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="COLUMN002" Type="nvarchar" MaxLength="50" />
+          <Property Name="COLUMN003" Type="nvarchar" MaxLength="50" />
+          <Property Name="COLUMN004" Type="nvarchar" MaxLength="50" />
+          <Property Name="COLUMN005" Type="datetime2" Precision="7" />
+          <Property Name="COLUMN006" Type="smallint" />
+        </EntityType>
+        <Association Name="FK__BCH003__COLUMN00__1FCDBCEB">
+          <End Role="BCH002" Type="Self.BCH002" Multiplicity="0..1" />
+          <End Role="BCH003" Type="Self.BCH003" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BCH002">
+              <PropertyRef Name="COLUMN001" />
+            </Principal>
+            <Dependent Role="BCH003">
+              <PropertyRef Name="COLUMN004" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BCH003__COLUMN00__20C1E124">
+          <End Role="BCH001" Type="Self.BCH001" Multiplicity="0..1" />
+          <End Role="BCH003" Type="Self.BCH003" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BCH001">
+              <PropertyRef Name="COLUMN001" />
+            </Principal>
+            <Dependent Role="BCH003">
+              <PropertyRef Name="COLUMN002" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BCH003__COLUMN00__21B6055D">
+          <End Role="BCH001" Type="Self.BCH001" Multiplicity="0..1" />
+          <End Role="BCH003" Type="Self.BCH003" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BCH001">
+              <PropertyRef Name="COLUMN001" />
+            </Principal>
+            <Dependent Role="BCH003">
+              <PropertyRef Name="COLUMN003" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BChatModelStoreContainer">
+          <EntitySet Name="BCH001" EntityType="Self.BCH001" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BCH002" EntityType="Self.BCH002" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BCH003" EntityType="Self.BCH003" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__BCH003__COLUMN00__1FCDBCEB" Association="Self.FK__BCH003__COLUMN00__1FCDBCEB">
+            <End Role="BCH002" EntitySet="BCH002" />
+            <End Role="BCH003" EntitySet="BCH003" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BCH003__COLUMN00__20C1E124" Association="Self.FK__BCH003__COLUMN00__20C1E124">
+            <End Role="BCH001" EntitySet="BCH001" />
+            <End Role="BCH003" EntitySet="BCH003" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BCH003__COLUMN00__21B6055D" Association="Self.FK__BCH003__COLUMN00__21B6055D">
+            <End Role="BCH001" EntitySet="BCH001" />
+            <End Role="BCH003" EntitySet="BCH003" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BChatModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MobileNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmailId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int16" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BCH003" Relationship="Self.FK__BCH003__COLUMN00__20C1E124" FromRole="BCH001" ToRole="BCH003" />
+          <NavigationProperty Name="BCH0031" Relationship="Self.FK__BCH003__COLUMN00__21B6055D" FromRole="BCH001" ToRole="BCH003" />
+        </EntityType>
+        <EntityType Name="BCH002">
+          <Key>
+            <PropertyRef Name="COLUMN001" />
+          </Key>
+          <Property Name="COLUMN001" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="COLUMN002" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="COLUMN003" Type="DateTime" Precision="7" />
+          <Property Name="COLUMN004" Type="Int16" />
+          <NavigationProperty Name="BCH003" Relationship="Self.FK__BCH003__COLUMN00__1FCDBCEB" FromRole="BCH002" ToRole="BCH003" />
+        </EntityType>
+        <EntityType Name="BCH003">
+          <Key>
+            <PropertyRef Name="COLUMN001" />
+          </Key>
+          <Property Name="COLUMN001" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="COLUMN002" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="COLUMN003" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="COLUMN004" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="COLUMN005" Type="DateTime" Precision="7" />
+          <Property Name="COLUMN006" Type="Int16" />
+          <NavigationProperty Name="BCH001" Relationship="Self.FK__BCH003__COLUMN00__20C1E124" FromRole="BCH003" ToRole="BCH001" />
+          <NavigationProperty Name="BCH0011" Relationship="Self.FK__BCH003__COLUMN00__21B6055D" FromRole="BCH003" ToRole="BCH001" />
+          <NavigationProperty Name="BCH002" Relationship="Self.FK__BCH003__COLUMN00__1FCDBCEB" FromRole="BCH003" ToRole="BCH002" />
+        </EntityType>
+        <Association Name="FK__BCH003__COLUMN00__20C1E124">
+          <End Role="BCH001" Type="BChatModel.User" Multiplicity="0..1" />
+          <End Role="BCH003" Type="Self.BCH003" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BCH001">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BCH003">
+              <PropertyRef Name="COLUMN002" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BCH003__COLUMN00__21B6055D">
+          <End Role="BCH001" Type="BChatModel.User" Multiplicity="0..1" />
+          <End Role="BCH003" Type="Self.BCH003" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BCH001">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BCH003">
+              <PropertyRef Name="COLUMN003" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BCH003__COLUMN00__1FCDBCEB">
+          <End Role="BCH002" Type="Self.BCH002" Multiplicity="0..1" />
+          <End Role="BCH003" Type="Self.BCH003" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BCH002">
+              <PropertyRef Name="COLUMN001" />
+            </Principal>
+            <Dependent Role="BCH003">
+              <PropertyRef Name="COLUMN004" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BChatEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Users" EntityType="BChatModel.User" />
+          <EntitySet Name="BCH002" EntityType="Self.BCH002" />
+          <EntitySet Name="BCH003" EntityType="Self.BCH003" />
+          <AssociationSet Name="FK__BCH003__COLUMN00__20C1E124" Association="Self.FK__BCH003__COLUMN00__20C1E124">
+            <End Role="BCH001" EntitySet="Users" />
+            <End Role="BCH003" EntitySet="BCH003" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BCH003__COLUMN00__21B6055D" Association="Self.FK__BCH003__COLUMN00__21B6055D">
+            <End Role="BCH001" EntitySet="Users" />
+            <End Role="BCH003" EntitySet="BCH003" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BCH003__COLUMN00__1FCDBCEB" Association="Self.FK__BCH003__COLUMN00__1FCDBCEB">
+            <End Role="BCH002" EntitySet="BCH002" />
+            <End Role="BCH003" EntitySet="BCH003" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BChatModelStoreContainer" CdmEntityContainer="BChatEntities">
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="BChatModel.User">
+              <MappingFragment StoreEntitySet="BCH001">
+                <ScalarProperty Name="Id" ColumnName="COLUMN001" />
+                <ScalarProperty Name="UserId" ColumnName="COLUMN002" />
+                <ScalarProperty Name="FirstName" ColumnName="COLUMN003" />
+                <ScalarProperty Name="MiddleName" ColumnName="COLUMN004" />
+                <ScalarProperty Name="LastName" ColumnName="COLUMN005" />
+                <ScalarProperty Name="MobileNo" ColumnName="COLUMN006" />
+                <ScalarProperty Name="EmailId" ColumnName="COLUMN007" />
+                <ScalarProperty Name="Status" ColumnName="COLUMN008" />
+                <ScalarProperty Name="Country" ColumnName="COLUMN009" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BCH002">
+            <EntityTypeMapping TypeName="BChatModel.BCH002">
+              <MappingFragment StoreEntitySet="BCH002">
+                <ScalarProperty Name="COLUMN001" ColumnName="COLUMN001" />
+                <ScalarProperty Name="COLUMN002" ColumnName="COLUMN002" />
+                <ScalarProperty Name="COLUMN003" ColumnName="COLUMN003" />
+                <ScalarProperty Name="COLUMN004" ColumnName="COLUMN004" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BCH003">
+            <EntityTypeMapping TypeName="BChatModel.BCH003">
+              <MappingFragment StoreEntitySet="BCH003">
+                <ScalarProperty Name="COLUMN001" ColumnName="COLUMN001" />
+                <ScalarProperty Name="COLUMN002" ColumnName="COLUMN002" />
+                <ScalarProperty Name="COLUMN003" ColumnName="COLUMN003" />
+                <ScalarProperty Name="COLUMN004" ColumnName="COLUMN004" />
+                <ScalarProperty Name="COLUMN005" ColumnName="COLUMN005" />
+                <ScalarProperty Name="COLUMN006" ColumnName="COLUMN006" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

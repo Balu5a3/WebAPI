@@ -1,0 +1,12 @@
+D:\VS2034\WebApi\BChatDataAccess\bin\Debug\BChatDataAccess.dll.config
+D:\VS2034\WebApi\BChatDataAccess\bin\Debug\BChatDataAccess.dll
+D:\VS2034\WebApi\BChatDataAccess\bin\Debug\BChatDataAccess.pdb
+D:\VS2034\WebApi\BChatDataAccess\bin\Debug\EntityFramework.dll
+D:\VS2034\WebApi\BChatDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\VS2034\WebApi\BChatDataAccess\bin\Debug\EntityFramework.xml
+D:\VS2034\WebApi\BChatDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\VS2034\WebApi\BChatDataAccess\obj\Debug\BChatDataAccess.dll
+D:\VS2034\WebApi\BChatDataAccess\obj\Debug\BChatDataAccess.pdb
+D:\VS2034\WebApi\BChatDataAccess\obj\Debug\BChatDataAccess.csproj.AssemblyReference.cache
+D:\VS2034\WebApi\BChatDataAccess\obj\Debug\BChatDataAccess.csproj.CoreCompileInputs.cache
+D:\VS2034\WebApi\BChatDataAccess\obj\Debug\BChatDataAccess.csproj.CopyComplete
